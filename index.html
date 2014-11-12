@@ -4,7 +4,7 @@
   <title>Mortgage Rates Landing</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="public/styles/libs.css">
   <link rel="stylesheet" href="public/styles/styles.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
         <div class="form-wrapper clearfix">
           <div class="info">
             <img src="public/images/count-down.png" alt="" class="count-down">
-            <div class="rate-info">
+            <div class="rate-info hide-xs">
               <h3>Lowest Rate From This Lender</h3>
               <div class="clearfix">
                 <img src="public/images/l-rate-1.png" alt="">
@@ -37,7 +37,7 @@
               </div>
               <p>You pay <strong>$1,221</strong> monthly</p>
             </div>
-            <div class="rate-info">
+            <div class="rate-info hide-xs">
               <h3>Lowest Rate From This Lender</h3>
               <div class="clearfix">
                 <img src="public/images/l-rate-1.png" alt="">
@@ -45,8 +45,8 @@
               </div>
               <p>You pay <strong>$1,221</strong> monthly</p>
             </div>
-            <a href="" class="l-link-1">View all 5 Year Fixed Closed Rates</a>
-            <p>*MortgageRates.ca calculated these potential savings based on the average posted bank.</p>
+            <a href="" class="l-link-1 hide-xs">View all 5 Year Fixed Closed Rates</a>
+            <p class="hide-xs">*MortgageRates.ca calculated these potential savings based on the average posted bank.</p>
           </div>
           <div class="form">
             <form action="">
@@ -112,11 +112,14 @@
               <fieldset class="clearfix">
                 <button class="submit-btn btn green-gradient"><span></span> Send Request</button>
               </fieldset>
+              <fieldset class="clearfix show-xs">
+                <p>*MortgageRates.ca calculated these potential...</p>
+              </fieldset>
             </form>
           </div>
         </div>
       </div>
-      <img src="public/images/woman.png" alt="" class="woman">
+      <img src="public/images/woman.png" alt="" class="woman hide-s hide-xs">
     </div>
   </div>
   <div id="brands" class="general-padding">
@@ -294,7 +297,7 @@
   </div>
   <div id="bottom">
     <div class="container">
-      <p class="pull-left">Copyright &copy; 2014 MortgageRates.ca. All Rights Reserved</p>
+      <p class="pull-left">Copyright &copy; 2014 MortgageRates.ca. All Rights Reserved. <a href="">Privacy Policy</a> | <a href="">Terms and Conditions</a></p>
       <a href="" class="pull-right hide-xs"><img src="public/images/logo-footer.png"></a>
     </div>
   </div>
