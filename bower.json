@@ -1,0 +1,6 @@
+{
+  "name": "MortgageRatesLanding",
+  "dependencies": {
+    "bootstrap": "~3.3.0"
+  }
+}
