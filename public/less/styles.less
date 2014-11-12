@@ -213,6 +213,10 @@ header {
   background: url("../images/home-bg.png") repeat-x scroll center bottom #1F86DB;
   position: relative;
 
+  @media @xs {
+    padding: 30px 0 15px 0;
+  }
+
   .container {
     position: relative;
     height: 100%;
@@ -224,7 +228,25 @@ header {
       width: 100%;
       position: absolute;
       bottom: 13px;
-      right: -15px;
+      right: 0;
+
+      @media @medium {
+        background: url("../images/form-bg-medium.png") no-repeat scroll 100% 0px transparent;
+      }
+
+      @media @small {
+        background: url("../images/form-bg-small.png") no-repeat scroll 50% 0 transparent;
+        background-size: 100% auto;
+        bottom: 5px;
+      }
+
+      @media @xs {
+        background: url("../images/form-bg-xs.png") no-repeat scroll 0 0 transparent;
+        margin: 0 auto;
+        position: static;
+        width: 305px;
+        height: 637px;
+      }
 
       h2 {
         text-align: center;
@@ -233,13 +255,27 @@ header {
         line-height: 54px;
         padding-left: 125px;
         padding-right: 8px;
+
+        @media @small {
+          padding: 0;
+        }
+
+        @media @xs {
+          padding: 0;
+          font-size: 17px;
+          line-height: 45px
+        }
       }
     }
 
     .woman {
       position: absolute;
       bottom: 6px;
-      left: 0;
+      left: -3px;
+
+      @media @medium {
+        left: 25px;
+      }
     }
   }
 }
@@ -249,14 +285,55 @@ header {
   height: 411px;
   margin-right: 40px;
 
+  @media @medium {
+    margin-left: 185px;
+  }
+
+  @media @small {
+    margin: 0;
+  }
+
+  @media @xs {
+    margin: 0;
+    padding: 0 35px 0 36px;
+  }
+
   .info {
     float: left;
     width: 418px;
-    padding: 38px 32px 0px;
+    padding: 38px 32px 0px 50px;
+
+    @media @medium {
+      width: 320px;
+    }
+
+    @media @small {
+      width: 290px;
+      padding: 38px 24px 0 24px;
+      margin-left: 38px;
+    }
+
+    @media @xs {
+      width: 100%;
+      float: none;
+      padding: 38px 0 0 0;
+    }
 
     .count-down {
       display: block;
       margin: 0 auto 10px;
+
+      @media @medium {
+        width: 100%;
+      }
+
+      @media @small {
+        width: 100%;
+      }
+
+      @media @xs {
+        width: 80%;
+      }
     }
 
     .l-link-1 {
@@ -278,6 +355,21 @@ header {
     float: left;
     width: 555px;
 
+    @media @medium {
+      width: 425px;
+    }
+
+    @media @small {
+      padding: 18px 22px 0px;
+      width: 376px;
+    }
+
+    @media @xs {
+      padding: 0 15px;
+      width: 100%;
+      float: none;
+    }
+
     h5 {
       background: url("../images/l-icon-1.png") no-repeat scroll 100% 50%;
       color: @blue-2;
@@ -291,6 +383,12 @@ header {
         float: left;
         width: 50%;
 
+        @media @xs {
+          width: 100%;
+          float: none;
+          padding: 0 !important;
+        }
+
         label {
           color: @brown-2;
           display: block;
@@ -299,11 +397,34 @@ header {
           font-size: 12px;
           height: 30px;
           line-height: 34px;
+
+          @media @small {
+            height: 24px;
+            line-height: 22px;
+          }
+
+          @media @xs {
+            height: 15px;
+            line-height: 15px;
+            font-size: 10px;
+          }
         }
 
         input[type="text"],
         input[type="email"] {
-          width: 100%
+          width: 100%;
+
+          @media @xs {
+            height: 25px;
+            line-height: 25px;
+          }
+        }
+
+        @media @xs {
+          .select-wrapper {
+            height: 25px;
+            line-height: 25px;
+          }
         }
 
         &:first-child {
@@ -320,6 +441,11 @@ header {
           color: @gray-11;
           line-height: 17px;
           font-size: 11px;
+
+          @media @xs {
+            font-size: 9px;
+            line-height: 11px;
+          }
         }
       }
 
@@ -328,6 +454,12 @@ header {
         height: 40px;
         font-size: 16px;
 
+        @media @xs {
+          height: 35px;
+          float: none;
+          width: 100%;
+        }
+
         span {
           background: url("../images/l-arrow-3.png") no-repeat scroll 0 0;
           height: 25px;
@@ -335,7 +467,18 @@ header {
           display: inline-block;
           float: right;
           margin-left: 12px;
+
+          @media @xs {
+            position: relative;
+            top: -3px;
+          }
         }
+      }
+
+      p {
+        color: @gray-11;
+        font-size: 9px;
+        margin-top: 5px;
       }
     }
   }
@@ -343,6 +486,10 @@ header {
 
 .rate-info {
   margin-bottom: 14px;
+
+  @media @small {
+    margin-bottom: 5px;
+  }
   
   h3 {
     margin: 0 0 8px 0;
@@ -353,6 +500,10 @@ header {
     padding: 0 13px;
     font-size: 14px;
     font-weight: bold;
+
+    @media @small {
+      font-size: 13px;
+    }
   }
 
   > div {
@@ -424,14 +575,15 @@ header {
     }
   }
 
-  @media @small {
-    img {
+  img {
+    height: auto;
+
+    @media @small {
       width: 100%;
     }
-  }
 
-  @media @xs {
-    img {
+    @media @xs {
+      max-width: 180px;
       width: 100%;
     }
   }
@@ -726,7 +878,7 @@ header {
 
 /* Bottom ----------- */
 #bottom {
-  color: @gray-5;
+  color: @gray-8;
   font-size: 11px;
   padding: 10px 0;
   background-color: @gray-6;
@@ -735,5 +887,9 @@ header {
 
   p {
     margin: 0;
+  }
+
+  a {
+    color: @gray-8;
   }
 }

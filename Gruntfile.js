@@ -40,6 +40,14 @@ module.exports = function(grunt) {
       }
     },
 
+    cssmin: {
+      combine: {
+        files: {
+          'public/styles/libs.css': ['bower_components/bootstrap/dist/css/bootstrap.css']
+        }
+      }
+    },
+
     watch: {
       styles: {
         files: ['public/less/*.less'],
@@ -51,7 +59,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('default', ['concat', 'uglify', 'watch']);
+  grunt.registerTask('default', ['concat', 'uglify', 'cssmin', 'watch']);
 };
